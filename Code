@@ -1,0 +1,18 @@
+material = input()
+Pf = float(input())
+Pe = float(input())
+Tf = float(input())
+Estado = 'Solido'
+
+Tc = 5/9 * (Tf-32)
+
+if int(Tc) >= int(Pe):
+    Estado = 'Gasoso'
+elif Tc >= Pf:
+    Estado = 'Liquido'
+
+print('Material:', material)
+print('Ponto de fusao (Celsius):', format(Pf, '.2f'))
+print('Ponto de ebulicao (Celsius):', format(Pe, '.2f'))
+print('Temperatura atual (Celsius):', format(Tc, '.2f'))
+print('Estado fisico do material:', Estado)
