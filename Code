@@ -4,12 +4,13 @@ Pe = float(input())
 Tf = float(input())
 Estado = 'Solido'
 
-Tc = 5/9 * (Tf-32)
+Tc = (Tf-32)/1.8
 
-if int(Tc) >= int(Pe):
-    Estado = 'Gasoso'
-elif Tc >= Pf:
+if Tc < Pe and Tc >= Pf:
     Estado = 'Liquido'
+elif Tc >= Pe:
+    Estado = 'Gasoso'
+
 
 print('Material:', material)
 print('Ponto de fusao (Celsius):', format(Pf, '.2f'))
